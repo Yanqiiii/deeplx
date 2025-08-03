@@ -1,0 +1,45 @@
+{
+  "author": "xixu-me",
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250722.0",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.5.2",
+    "wrangler": "^4.25.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "main": "src/index.ts",
+  "name": "deeplx",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xixu-me/DeepLX.git"
+  },
+  "scripts": {
+    "cf-typegen": "wrangler types",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "fix-lockfile": "node scripts/fix-lockfile.js",
+    "lint": "tsc --noEmit",
+    "start": "wrangler dev",
+    "test": "jest",
+    "test:ci": "jest --coverage --ci --watchAll=false",
+    "test:coverage": "jest --coverage",
+    "test:debug": "jest --detectOpenHandles --forceExit",
+    "test:integration": "jest --testPathPattern=tests/integration",
+    "test:performance": "jest --testPathPattern=tests/performance",
+    "test:runner": "node scripts/test-runner.js",
+    "test:setup": "node scripts/setup-tests.js",
+    "test:unit": "jest --testPathPattern=tests/lib",
+    "test:verbose": "jest --verbose",
+    "test:watch": "jest --watch"
+  },
+  "version": "1.0.0"
+}

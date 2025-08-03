@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "account_id": "07c56e0dc4b3b1597495aa78fe7ebbf8",
+  "analytics_engine_datasets": [
+    {
+      "binding": "ANALYTICS"
+    }
+  ],
+  "compatibility_date": "2025-07-19",
+  "kv_namespaces": [
+    {
+      "binding": "CACHE_KV",
+      "id": "6b8a6e2b50aa44cf81eec4db2af1c450",
+      "preview_id": "e9e499fe006e4879a0668e792fe2dd15"
+    },
+    {
+      "binding": "RATE_LIMIT_KV",
+      "id": "771f5e8cc87f42c781e6e64c87e38510",
+      "preview_id": "bbed039364e5488e8ed58701c3ee5da5"
+    }
+  ],
+  "main": "src/index.ts",
+  "name": "deeplx",
+  "observability": {
+    "enabled": true
+  },
+  "placement": {
+    "mode": "smart"
+  },
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "vars": {
+    "DEBUG_MODE": "false",
+    "PROXY_URLS": "https://0.xdpl.xixu.dpdns.org/jsonrpc,https://1.xdpl.xixu.dpdns.org/jsonrpc,https://2.xdpl.xixu.dpdns.org/jsonrpc,https://3.xdpl.xixu.dpdns.org/jsonrpc,https://4.xdpl.xixu.dpdns.org/jsonrpc,https://5.xdpl.xixu.dpdns.org/jsonrpc,https://6.xdpl.xixu.dpdns.org/jsonrpc,https://7.xdpl.xixu.dpdns.org/jsonrpc,https://8.xdpl.xixu.dpdns.org/jsonrpc,https://9.xdpl.xixu.dpdns.org/jsonrpc"
+  },
+  "workers_dev": false
+}
