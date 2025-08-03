@@ -1,4 +1,4 @@
-// jest.config.js
+// jest.config.js (最终正确版本)
 
 module.exports = {
   preset: 'ts-jest',
@@ -8,13 +8,11 @@ module.exports = {
   
   transform: {
     '^.+\\.ts$': ['ts-jest', {
+      // ✅ 这是修正了结构的核心部分
       tsconfig: {
-        compilerOptions: {
-          "types": ["@cloudflare/workers-types", "jest", "node"],
-
-          // 👇 新增这一行来解决类型不匹配问题
-          "esModuleInterop": true
-        }
+        // TypeScript 编译选项直接放在这里，而不是再嵌套一层 "compilerOptions"
+        "types": ["@cloudflare/workers-types", "jest", "node"],
+        "esModuleInterop": true
       }
     }]
   },
