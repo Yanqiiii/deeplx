@@ -17,6 +17,6 @@
   
   "vars": {
     "DEBUG_MODE": "false",
-    "PROXY_URLS": "https://mr-blush.vercel.app/jsonrpc,"
+    "PROXY_URLS": "https://mr-blush.vercel.app/jsonrpc"
   }
 }
